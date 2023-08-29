@@ -1,19 +1,10 @@
-import react from "react";
-import {View, SafeAreaView, StyleSheet, Text, StatusBar, FlatList} from "react-native";
+import React from 'react';
+import { SafeAreaView, View, FlatList, StyleSheet, Text, StatusBar } from 'react-native-web';
 
 const DATA = [
-  {
-    id: '1',
-    title: 'First Item'
-  },
-  {
-    id: '2',
-    title: "Second item"
-  },
-  {
-    id: '3',
-    title: "Third item"
-  }
+  {id: '01', title: 'First Item',},
+  {id: '02', title: 'Second Item',},
+  {id: '03', title: 'Third Item',},
 ];
 
 const Item = ({title}) => (
@@ -22,7 +13,6 @@ const Item = ({title}) => (
   </View>
 );
 
-
 const Home2 = () => {
   return(
     <SafeAreaView style={styles.container}>
@@ -30,16 +20,16 @@ const Home2 = () => {
         data={DATA}
         renderItem={({item}) => <Item title={item.title} />}
         keyExtractor={item => item.id}
-      ></FlatList>
+      />
     </SafeAreaView>
   );
-}
+};
 
-export default Home2();
+export default Home2;
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex:1,
     marginTop: StatusBar.currentHeight || 0,
   },
   item: {
@@ -50,5 +40,5 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-  }
+  },
 });

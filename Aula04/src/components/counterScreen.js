@@ -1,12 +1,12 @@
-import React,{useState} from "react";
-import { View, Button, Text } from "react-native";
+import React,{useState} from 'react';
+import {View,Button,Text} from 'react-native';
 
 const CounterScreen = () => {
   const [counter, setCounter] = useState(0);
+
   return(
     <View>
-      <Button 
-        title="Incrementa"
+      <Button title='Incrementa'
         onPress={()=>setCounter(counter+1)}
       />
       <Text>{counter}</Text>
@@ -14,4 +14,4 @@ const CounterScreen = () => {
   );
 }
 
-export default CounterScreen();
+export default CounterScreen;
